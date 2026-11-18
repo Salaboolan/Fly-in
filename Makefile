@@ -15,13 +15,13 @@ clean:
 	find . -name "*.pyc" -delete
 
 lint:
-	$(PYTHON) -m flake8 .
-	$(PYTHON) -m mypy . --warn-return-any --warn-unused-ignores \
+	flake8 .
+	mypy . --warn-return-any --warn-unused-ignores \
 		--ignore-missing-imports --disallow-untyped-defs \
 		--check-untyped-defs
 
 lint-strict:
-	$(PYTHON) -m flake8 .
-	$(PYTHON) -m mypy . --strict
+	flake8 .
+	mypy . --strict
 
 .PHONY: install run debug clean lint lint-strict

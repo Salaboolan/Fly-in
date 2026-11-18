@@ -157,7 +157,7 @@ class Parser:
             data[key] = value
         return main.strip(), data
 
-    def _capacity(self, value: int, number: int) -> int:
+    def _capacity(self, value: str, number: int) -> int:
         """Return a positive capacity."""
         try:
             capacity = int(value)
